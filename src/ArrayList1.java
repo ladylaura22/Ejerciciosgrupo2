@@ -4,25 +4,18 @@
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class ArrayList1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        List<Integer> numeros = new ArrayList<>();
+        ArrayList<Integer> numeros = new ArrayList<>();
+        Random random = new Random();
 
-        System.out.println("Empieza a crear la lista de números:");
-
-        numeros.add(20);
-        numeros.add(10);
-        numeros.add(30);
-        numeros.add(89);
-        numeros.add(43);
-        numeros.add(36);
-        numeros.add(26);
-        numeros.add(12);
-        numeros.add(79);
-        numeros.add(16);
+        // Generate 10 random numbers between 0 and 100
+        for (int i = 0; i < 10; i++) {
+            numeros.add(random.nextInt(101)); // 101 is exclusive upper bound
+        }
         int maximo = Collections.max(numeros);
         int minimo = Collections.min(numeros);
 
